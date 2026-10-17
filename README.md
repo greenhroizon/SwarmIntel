@@ -1,4 +1,4 @@
-# Swarm Signal — Vercel upload bundle
+# Swarm Signal 
 
 This directory is a standalone deployment bundle for the Swarm Signal research
 workspace. **Upload the contents of this directory as the root of a new GitHub
