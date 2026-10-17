@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f5" />
+    <meta
+      name="description"
+      content="A quiet research workspace for evidence-aware forecasting and impact mapping."
+    />
+    <title>Swarm Signal — Research workspace</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to research workspace</a>
+
+    <div class="app-shell">
+      <header class="site-header" aria-label="Application header">
+        <a class="brand" href="/" aria-label="Swarm Signal home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-copy">
+            <strong>SWARM<span>//</span>SIGNAL</strong>
+            <small>RESEARCH WORKSPACE</small>
+          </span>
+        </a>
+
+        <nav class="mode-switch" aria-label="Workspace sections" role="tablist">
+          <button class="mode-tab is-active" type="button" role="tab" data-mode-tab="live" aria-selected="true" aria-controls="live-mode">
+            <span class="mode-tab-index">01</span>
+            <span><strong>Research</strong><small>LIVE WORKSPACE</small></span>
+          </button>
+          <button class="mode-tab" type="button" role="tab" data-mode-tab="demo" aria-selected="false" aria-controls="demo-mode">
+            <span class="mode-tab-index">02</span>
+            <span><strong>Gallery</strong><small>OFFLINE EXAMPLES</small></span>
+          </button>
+          <button class="mode-tab" type="button" role="tab" data-mode-tab="settings" aria-selected="false" aria-controls="settings-mode">
+            <span class="mode-tab-index">03</span>
+            <span><strong>Settings</strong><small>PROVIDER ACCESS</small></span>
+          </button>
+        </nav>
+
+        <div class="header-status" aria-live="polite">
+          <span class="status-dot" data-connection-dot aria-hidden="true"></span>
+          <span data-connection-status>LOCAL / CHECKING</span>
+          <span class="status-divider" aria-hidden="true"></span>
+          <span class="header-clock" data-local-clock>--:--</span>
+        </div>
+      </header>
+
+      <main id="main-content">
+        <section class="mode-panel live-mode" id="live-mode" data-mode-panel="live" aria-labelledby="page-title" role="tabpanel">
+          <section class="page-intro">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true">/</span> RESEARCH / LIVE PANEL</p>
+              <h1 id="page-title">A clearer path from question<br /><em>to consequence.</em></h1>
+              <p class="intro-lede">
+                Ask one clear question and choose how many bounded agents should examine it.
+                Swarm Signal discovers a small public evidence packet automatically, then lays out the reports, debate, map, and scoring.
+              </p>
+            </div>
+            <aside class="intro-note" aria-label="Workspace note">
+              <span class="note-rule" aria-hidden="true"></span>
+              <strong>Research starts automatically.</strong>
+              <p>Your question is enough to begin. Public discovery is bounded, inspectable, and never a comprehensive web search.</p>
+            </aside>
+          </section>
+
+          <div class="workspace-grid">
+            <section class="workspace-card briefing-panel" aria-labelledby="briefing-title">
+              <div class="panel-heading">
+                <div>
+                  <p class="section-kicker">01 / FRAME THE QUESTION</p>
+                  <h2 id="briefing-title">Research brief</h2>
+                </div>
+                <span class="panel-index" aria-hidden="true">A</span>
+              </div>
+
+              <aside class="live-readiness" id="live-readiness" aria-live="polite">
+                <div>
+                  <span class="mode-badge mode-badge-live">LIVE</span>
+                  <p id="live-readiness-status">Configure a provider in Settings before running a live panel.</p>
+                </div>
+                <button class="text-button" id="open-settings-inline" type="button">Open settings</button>
+              </aside>
+
+              <form id="forecast-form" novalidate>
+                <div class="field-group field-group-scenario">
+                  <div class="field-label-row">
+                    <label for="scenario">Research question <span class="required-mark" aria-hidden="true">*</span></label>
+                    <span class="field-counter" id="scenario-count">0 / 2,000</span>
+                  </div>
+                  <textarea
+                    id="scenario"
+                    name="scenario"
+                    rows="4"
+                    maxlength="2000"
+                    required
+                    aria-describedby="scenario-help scenario-error"
+                    placeholder="What should the research swarm investigate?"
+                  >Will the neighborhood solar project receive approval this year?</textarea>
+                  <p class="field-help" id="scenario-help">Ask a concrete question. Research, role assignment, debate, and scoring follow automatically.</p>
+                  <p class="field-error" id="scenario-error" role="alert"></p>
+                </div>
+
+                <fieldset class="field-group agent-count-fieldset" id="agent-count-fieldset" aria-describedby="agent-count-help agent-count-error">
+                  <legend><span class="legend-title">Agent count</span><output id="agent-count-value" for="agent-count-range">6 agents</output></legend>
+                  <div class="agent-count-presets" role="radiogroup" aria-label="Agent count presets">
+                    <label class="agent-count-option"><input type="radio" name="agent_count_preset" value="2" /><span>2<small>focused</small></span></label>
+                    <label class="agent-count-option"><input type="radio" name="agent_count_preset" value="4" /><span>4<small>quick</small></span></label>
+                    <label class="agent-count-option"><input type="radio" name="agent_count_preset" value="6" checked /><span>6<small>balanced</small></span></label>
+                    <label class="agent-count-option"><input type="radio" name="agent_count_preset" value="8" /><span>8<small>wide</small></span></label>
+                    <label class="agent-count-option"><input type="radio" name="agent_count_preset" value="12" /><span>12<small>deep</small></span></label>
+                  </div>
+                  <input id="agent-count-range" name="agent_count" type="range" min="2" max="12" step="1" value="6" aria-label="Exact number of research agents" aria-describedby="agent-count-help agent-count-error" />
+                  <div class="range-scale" aria-hidden="true"><span>2 agents</span><span>12 agents</span></div>
+                  <p class="field-help" id="agent-count-help">Each selected agent answers the question from a distinct bounded role. The live request uses exactly this count.</p>
+                  <p class="field-error" id="agent-count-error" role="alert"></p>
+                </fieldset>
+
+                <details class="advanced-brief" id="advanced-brief">
+                  <summary>Advanced brief <span>optional context, source notes, objectives, and legacy controls</span></summary>
+                  <div class="advanced-brief-body">
+                    <div class="field-group">
+                      <div class="field-label-row">
+                        <label for="context">Context &amp; conditions <span class="optional-label">OPTIONAL</span></label>
+                        <span class="field-signal">USER-SUPPLIED</span>
+                      </div>
+                      <textarea id="context" name="context" rows="3" maxlength="1200" aria-describedby="context-help context-error" placeholder="Optional assumptions or timing context."></textarea>
+                      <p class="field-help" id="context-help">Optional context is directional input and is not independently verified.</p>
+                      <p class="field-error" id="context-error" role="alert"></p>
+                    </div>
+
+                    <div class="field-group">
+                      <div class="field-label-row">
+                        <label for="source-urls">Source notes <span class="optional-label">OPTIONAL · PREVIEW ONLY</span></label>
+                        <span class="field-counter" id="source-urls-count">0 / 8</span>
+                      </div>
+                      <textarea id="source-urls" name="source_urls" rows="3" maxlength="16384" aria-describedby="source-urls-help source-urls-error" placeholder="Optional references for an evidence preview."></textarea>
+                      <p class="field-help" id="source-urls-help">Normal runs always discover from the question and send no user URLs. These notes are never required; malformed lines are ignored rather than blocking a run.</p>
+                      <input id="discover-web" type="checkbox" checked hidden aria-hidden="true" />
+                      <p class="field-error" id="source-urls-error" role="alert"></p>
+                    </div>
+
+                    <div class="field-group">
+                      <div class="field-label-row">
+                        <label for="objectives">Agent objectives <span class="optional-label">OPTIONAL</span></label>
+                        <span class="field-counter" id="objectives-count">0 / 2,000</span>
+                      </div>
+                      <textarea id="objectives" name="objectives" rows="3" maxlength="2000" aria-describedby="objectives-help objectives-error" placeholder="Optional instructions, one per line."></textarea>
+                      <p class="field-help" id="objectives-help">Optional objectives can focus the panel without changing automatic discovery.</p>
+                      <p class="field-error" id="objectives-error" role="alert"></p>
+                    </div>
+
+                    <fieldset class="field-group option-fieldset" id="domain-fieldset" aria-describedby="domain-help domain-error">
+                      <legend><span class="legend-title">Domain lenses</span><span class="field-signal">OPTIONAL</span></legend>
+                      <div class="domain-chips">
+                        <label class="domain-chip"><input type="checkbox" name="domains" value="policy" /><span>Policy</span></label>
+                        <label class="domain-chip"><input type="checkbox" name="domains" value="energy" /><span>Energy</span></label>
+                        <label class="domain-chip"><input type="checkbox" name="domains" value="community" /><span>Community</span></label>
+                        <label class="domain-chip"><input type="checkbox" name="domains" value="technology" /><span>Technology</span></label>
+                        <label class="domain-chip"><input type="checkbox" name="domains" value="finance" /><span>Finance</span></label>
+                        <label class="domain-chip"><input type="checkbox" name="domains" value="operations" /><span>Operations</span></label>
+                        <label class="domain-chip"><input type="checkbox" name="domains" value="market" /><span>Market</span></label>
+                        <label class="domain-chip"><input type="checkbox" name="domains" value="climate" /><span>Climate</span></label>
+                      </div>
+                      <p class="field-help" id="domain-help">Leave blank to let the bounded panel use a general lens.</p>
+                      <p class="field-error" id="domain-error" role="alert"></p>
+                    </fieldset>
+
+                    <div class="compact-controls legacy-controls">
+                      <fieldset class="field-group option-fieldset" id="swarm-size-fieldset" aria-describedby="swarm-size-help swarm-size-error">
+                        <legend><span class="legend-title">Virtual swarm size</span><output id="swarm-size-value" for="swarm-size-range">128 voices</output></legend>
+                        <div class="swarm-options" role="radiogroup" aria-label="Virtual swarm size">
+                          <label class="swarm-option"><input type="radio" name="swarm_size" value="24" /><span>24 <small>quick</small></span></label>
+                          <label class="swarm-option"><input type="radio" name="swarm_size" value="128" checked /><span>128 <small>balanced</small></span></label>
+                          <label class="swarm-option"><input type="radio" name="swarm_size" value="512" /><span>512 <small>deep</small></span></label>
+                          <label class="swarm-option"><input type="radio" name="swarm_size" value="1000" /><span>1k <small>wide</small></span></label>
+                        </div>
+                        <input id="swarm-size-range" name="swarm_size_range" type="range" min="24" max="5000" step="1" value="128" aria-label="Exact virtual swarm size" aria-describedby="swarm-size-help swarm-size-error" />
+                        <div class="range-scale" aria-hidden="true"><span>24</span><span>5,000</span></div>
+                        <p class="field-help" id="swarm-size-help">Legacy metadata retained for older live responses.</p>
+                        <p class="field-error" id="swarm-size-error" role="alert"></p>
+                      </fieldset>
+                      <div class="field-group rounds-group">
+                        <div class="field-label-row"><label for="debate-rounds">Debate rounds</label><output id="debate-rounds-value" for="debate-rounds">3 rounds</output></div>
+                        <input id="debate-rounds" name="debate_rounds" type="range" min="1" max="5" step="1" value="3" aria-describedby="rounds-help rounds-error" />
+                        <div class="range-scale" aria-hidden="true"><span>1 / solo</span><span>5 / challenge</span></div>
+                        <p class="field-help" id="rounds-help">Legacy compatibility control; normal runs use the backend debate contract.</p>
+                        <p class="field-error" id="rounds-error" role="alert"></p>
+                      </div>
+                    </div>
+                    <button class="button button-secondary advanced-evidence-button" id="collect-evidence" type="button"><span aria-hidden="true">+</span> <span id="collect-evidence-label">Preview discovered evidence</span></button>
+                  </div>
+                </details>
+
+                <div class="form-actions">
+                  <button class="button button-primary run-research-button" id="run-swarm" type="submit"><span class="button-label">Run research swarm</span><span class="button-shortcut" aria-hidden="true">⌘ ↵</span></button>
+                  <button class="button button-quiet" id="reset-console" type="button">Clear question</button>
+                </div>
+                <p class="form-status" id="form-status" role="alert" aria-live="assertive"></p>
+              </form>
+            </section>
+
+            <aside class="workspace-side">
+              <section class="workspace-card evidence-panel" id="evidence-panel" aria-labelledby="evidence-title">
+                <div class="panel-heading panel-heading-compact">
+                  <div><p class="section-kicker">RESEARCH PACKET</p><h2 id="evidence-title">Evidence desk</h2></div>
+                  <span class="source-count" id="evidence-count">0</span>
+                </div>
+                <div class="evidence-status-line">
+                  <span class="status-mark" aria-hidden="true"></span>
+                  <p id="evidence-status">The next live run can discover a small public result set from the statement.</p>
+                </div>
+                <div class="source-scope-label" id="evidence-scope-label">Statement discovery or submitted overrides <span aria-hidden="true">·</span> not comprehensive</div>
+                <div class="evidence-sources" id="evidence-sources" aria-live="polite">
+                  <p class="empty-state">Sources, status, and short excerpts will appear here.</p>
+                </div>
+                <div class="evidence-limitations">
+                  <span class="section-kicker">LIMITATIONS</span>
+                  <p id="evidence-limitations">No evidence packet has been collected for this brief.</p>
+                </div>
+              </section>
+
+              <section class="workspace-card history-panel" aria-labelledby="history-title">
+                <div class="panel-heading panel-heading-compact">
+                  <div><p class="section-kicker">LOCAL MEMORY</p><h2 id="history-title">Recent runs</h2></div>
+                  <span class="history-count" id="history-count">0</span>
+                </div>
+                <div class="history-list" id="history-list" aria-live="polite"><p class="empty-state">Your latest signals stay on this device.</p></div>
+                <div class="history-footer">
+                  <span><span class="local-dot" aria-hidden="true"></span> HISTORY IS LOCAL · KEYS NEVER SAVED</span>
+                  <button class="text-button" id="clear-history" type="button" hidden>Clear history</button>
+                </div>
+              </section>
+            </aside>
+          </div>
+
+          <section class="workspace-card progress-panel" id="progress-panel" aria-labelledby="progress-title" hidden>
+            <div class="progress-header">
+              <div><p class="section-kicker">LIVE SYNTHESIS</p><h2 id="progress-title">Building a trace<span class="thinking-dots" aria-hidden="true">…</span></h2></div>
+              <div class="progress-readout"><strong id="progress-percent">0%</strong><span id="progress-stage">Research</span></div>
+            </div>
+            <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+            <ol class="stage-rail" aria-label="Research swarm stages">
+              <li class="stage-item is-active" data-stage="research"><span class="stage-marker">01</span><span><strong>Research</strong><small>Discover sources</small></span></li>
+              <li class="stage-item" data-stage="role_panel"><span class="stage-marker">02</span><span><strong>Role panel</strong><small>Assign agents</small></span></li>
+              <li class="stage-item" data-stage="debate"><span class="stage-marker">03</span><span><strong>Debate</strong><small>Challenge signal</small></span></li>
+              <li class="stage-item" data-stage="synthesis"><span class="stage-marker">04</span><span><strong>Synthesis</strong><small>Compare reports</small></span></li>
+              <li class="stage-item" data-stage="scoring"><span class="stage-marker">05</span><span><strong>Scoring</strong><small>Measure support</small></span></li>
+              <li class="stage-item" data-stage="render"><span class="stage-marker">06</span><span><strong>Render</strong><small>Map arguments</small></span></li>
+            </ol>
+            <p class="progress-note" id="progress-note">A configured provider will power a bounded, inspectable panel.</p>
+          </section>
+        </section>
+
+        <section class="mode-panel demo-mode" id="demo-mode" data-mode-panel="demo" aria-labelledby="demo-title" role="tabpanel" hidden>
+          <div class="section-intro">
+            <div><p class="section-kicker">OFFLINE GALLERY / 02</p><h2 id="demo-title">Try the research view without setup.</h2><p>Three bundled scenarios show the full result language, including evidence notes, impact maps, and competing paths. Playback never contacts an API.</p></div>
+            <span class="safety-label"><span aria-hidden="true">●</span> NO API KEY · NO NETWORK CALLS</span>
+          </div>
+          <div class="demo-scenario-grid" id="demo-scenarios" aria-live="polite"></div>
+        </section>
+
+        <section class="mode-panel settings-mode" id="settings-mode" data-mode-panel="settings" aria-labelledby="settings-title" role="tabpanel" hidden>
+          <div class="section-intro">
+            <div><p class="section-kicker">PROVIDER ACCESS / 03</p><h2 id="settings-title">Keep the live connection intentional.</h2><p>Choose a provider, test the connection, and keep the credential available only for this page session.</p></div>
+            <span class="safety-label"><span aria-hidden="true">⌁</span> KEY NEVER PERSISTED</span>
+          </div>
+          <div class="settings-grid">
+            <form class="workspace-card provider-form" id="provider-form" novalidate>
+              <div class="provider-form-heading"><div><p class="section-kicker">LIVE PROVIDER</p><h3>Connection details</h3></div><span class="panel-index" aria-hidden="true">S</span></div>
+              <div class="provider-field"><label for="provider-select">Provider</label><select id="provider-select" name="provider_id" autocomplete="off"></select></div>
+              <div class="provider-field"><label for="provider-model">Model</label><input id="provider-model" name="model" type="text" maxlength="256" autocomplete="off" placeholder="e.g. gpt-4o-mini" /></div>
+              <div class="provider-field"><label for="provider-api-key">API key <span class="optional-label">SESSION ONLY</span></label><input id="provider-api-key" name="api_key" type="password" autocomplete="new-password" spellcheck="false" placeholder="Enter a provider key" /><p class="provider-field-help">Held in JavaScript memory for this page session. Never saved to localStorage, history, the URL, or a result.</p></div>
+              <div class="provider-field"><label for="provider-base-url" id="provider-base-url-label">Custom base URL <span class="optional-label">OPTIONAL</span></label><input id="provider-base-url" name="base_url" type="text" inputmode="url" maxlength="2048" autocomplete="off" placeholder="https://..." /><p class="provider-field-help" id="provider-base-url-help">Leave blank to use the selected provider's default endpoint.</p></div>
+              <div class="provider-field provider-timeout-field"><label for="provider-timeout">Timeout <span class="optional-label">SECONDS</span></label><input id="provider-timeout" name="timeout" type="number" min="0.1" max="60" step="0.1" inputmode="decimal" /></div>
+              <div class="provider-actions"><button class="button button-secondary" id="test-provider" type="button">Test connection</button><button class="button button-primary" id="use-provider" type="button">Use for live runs</button></div>
+              <p class="provider-form-error" id="provider-form-error" role="alert"></p><p class="provider-status" id="provider-status" role="status" aria-live="polite">No live provider is configured for this page yet.</p>
+            </form>
+            <aside class="workspace-card provider-catalog" aria-labelledby="provider-catalog-title">
+              <div class="provider-form-heading"><div><p class="section-kicker">AVAILABLE CATALOG</p><h3 id="provider-catalog-title">Provider routes</h3></div><span class="catalog-status-dot" aria-hidden="true"></span></div>
+              <p class="provider-catalog-status" id="provider-catalog-status" role="status" aria-live="polite">Built-in catalog ready. Checking the local server when Settings opens.</p>
+              <ul class="provider-catalog-list" id="provider-catalog-list"></ul>
+              <p class="section-footnote">OpenAI, Anthropic, Google Gemini, OpenRouter, and custom OpenAI-compatible endpoints are supported by the current provider contract.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="results-shell" id="results-panel" aria-labelledby="results-title" hidden>
+          <div class="results-heading">
+            <div><p class="section-kicker">02 / READ THE SIGNAL</p><h2 id="results-title">Evidence, signal, consequence</h2></div>
+            <div class="result-actions"><button class="button button-secondary" id="rerun-swarm" type="button">↻ Re-run</button><button class="button button-quiet" id="new-forecast" type="button">New brief</button></div>
+          </div>
+
+          <div class="result-mode-banner" id="result-mode-banner" aria-live="polite"><span class="mode-badge mode-badge-live" id="result-mode-badge">LIVE</span><p id="result-mode-note">A bounded provider panel will be shown here after a live run.</p><span class="guarantee-badge" id="result-guarantee-badge">NO GUARANTEE</span></div>
+
+          <article class="signal-card">
+            <div class="signal-main"><p class="signal-label">DIRECTIONAL PROBABILITY</p><div class="probability-lockup"><div class="probability-ring" id="probability-ring" style="--probability: 0%" aria-hidden="true"><div class="probability-ring-inner"><span id="probability-value">—</span></div></div><div><p class="signal-caption" id="signal-caption">Awaiting synthesis</p><p class="signal-microcopy">A bounded estimate, not a prediction guarantee.</p></div></div></div>
+            <div class="signal-divider" aria-hidden="true"></div>
+            <div class="confidence-block"><div class="metric-heading"><span>CONFIDENCE</span><strong id="confidence-value">—</strong></div><div class="confidence-track" role="progressbar" aria-label="Forecast confidence" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="confidence-fill"></span></div><p id="confidence-note">How tightly the panel clustered.</p></div>
+            <div class="signal-divider" aria-hidden="true"></div>
+            <div class="result-meta" id="result-meta">
+                <div><span>REQUESTED AGENTS</span><strong id="result-agent-count">—</strong></div>
+                <div><span>REQUESTED VOICES</span><strong id="result-swarm-size">—</strong></div>
+               <div><span>ROUNDS</span><strong id="result-rounds">—</strong></div>
+               <div><span>LENSES</span><strong id="result-domains">—</strong></div>
+               <div><span>BOUNDED LIVE AGENTS</span><strong id="result-live-agents">—</strong></div>
+               <div><span>TOTAL CALLS</span><strong id="result-api-calls">—</strong></div>
+               <div><span>TRACE TIMING</span><strong id="result-timing">timing not returned</strong></div>
+            </div>
+          </article>
+
+          <div class="outcome-card"><div class="outcome-quote" aria-hidden="true">“</div><div><p class="section-kicker">OUTCOME STATEMENT</p><p class="outcome-text" id="outcome-text">The panel is ready to review your statement.</p><p class="scenario-echo" id="scenario-echo"></p></div></div>
+
+           <div class="results-grid evidence-results-grid">
+              <section class="result-section" aria-labelledby="evidence-summary-title"><div class="result-section-heading"><div><p class="section-kicker">EVIDENCE READ</p><h3 id="evidence-summary-title">What the packet says</h3></div><span class="heading-note" id="result-source-count">0 SOURCES</span></div><p class="evidence-summary" id="evidence-summary">No evidence summary was returned for this run.</p><div class="source-scope-label" id="result-evidence-scope-label">Statement discovery · not comprehensive</div><div class="result-source-list" id="result-sources"></div><p class="section-footnote" id="result-limitations">Evidence limitations will appear here.</p></section>
+             <section class="result-section" aria-labelledby="objectives-title"><div class="result-section-heading"><div><p class="section-kicker">AGENT BRIEF</p><h3 id="objectives-title">Objectives carried into synthesis</h3></div><span class="heading-note">TRACEABLE INPUT</span></div><ul class="objective-result-list" id="objective-results"></ul><p class="empty-state compact-empty" id="objectives-empty">No optional objectives were supplied.</p></section>
+           </div>
+
+           <section class="result-section agent-reports-section" aria-labelledby="agent-reports-title">
+             <div class="result-section-heading"><div><p class="section-kicker">ROLE PANEL / COMPLETE REPORTS</p><h3 id="agent-reports-title">What each agent answered</h3></div><span class="heading-note" id="agent-reports-count">0 AGENTS</span></div>
+             <p class="section-lede" id="agent-reports-lede">Every selected agent receives the same question and bounded evidence packet, then reports its own position.</p>
+             <div class="agent-reports-list" id="agent-reports" aria-live="polite"></div>
+             <p class="empty-state compact-empty" id="agent-reports-empty">No structured agent reports were returned for this run.</p>
+           </section>
+
+           <div class="results-grid scoring-results-grid">
+             <section class="result-section scoring-section" aria-labelledby="scoring-title">
+               <div class="result-section-heading"><div><p class="section-kicker">LOCAL ARGUMENT ANALYSIS</p><h3 id="scoring-title">Scoring</h3></div><span class="heading-note">DETERMINISTIC</span></div>
+               <p class="section-lede">Scores are generated locally from cited evidence and structured reports; provider graph output is not used.</p>
+               <div class="score-metric-grid" id="scoring-metrics"></div>
+               <p class="section-footnote" id="scoring-method">Scoring metadata will appear here.</p>
+             </section>
+             <section class="result-section agent-scores-section" aria-labelledby="agent-scores-title">
+               <div class="result-section-heading"><div><p class="section-kicker">ROLE QUALITY</p><h3 id="agent-scores-title">Agent scores</h3></div><span class="heading-note" id="agent-scores-count">0 AGENTS</span></div>
+               <div class="agent-scores-list" id="agent-scores"></div>
+               <p class="empty-state compact-empty" id="agent-scores-empty">No per-agent scores were returned for this run.</p>
+             </section>
+           </div>
+
+          <div class="results-grid impact-results-grid">
+             <section class="result-section impact-section" aria-labelledby="impact-title"><div class="result-section-heading"><div><p class="section-kicker">LOCAL ARGUMENT MAP</p><h3 id="impact-title">How the signal travels</h3></div><span class="heading-note">NODES · EDGES</span></div><div class="impact-graph-wrap"><svg id="impact-graph" role="img" aria-labelledby="impact-title impact-graph-description" viewBox="0 0 720 360" preserveAspectRatio="xMidYMid meet"></svg><p id="impact-graph-description" class="visually-hidden">A locally generated graph of the question, evidence, claims, counterclaims, and outcome.</p><div class="graph-legend" id="impact-legend" aria-label="Impact map legend"><span><i class="legend-swatch legend-swatch-node" aria-hidden="true"></i>Node = question, evidence, claim, or consequence</span><span><i class="legend-swatch legend-swatch-edge" aria-hidden="true"></i>Arrow = relationship direction</span><span><i class="legend-swatch legend-swatch-strength" aria-hidden="true"></i>Weight = bounded confidence</span></div><p class="empty-state compact-empty" id="impact-empty">A local argument map will appear when structured reports are available.</p><ul class="graph-text-fallback" id="impact-graph-text" aria-label="Complete text view of the argument map"></ul></div></section>
+            <section class="result-section decision-section" aria-labelledby="decision-title"><div class="result-section-heading"><div><p class="section-kicker">DECISION PATHS</p><h3 id="decision-title">Competing ways forward</h3></div><span class="heading-note">PROBABILITY · IMPACT</span></div><div class="decision-path-list" id="decision-paths"></div><p class="empty-state compact-empty" id="decision-empty">No competing paths were returned for this run.</p></section>
+          </div>
+
+          <div class="results-grid">
+            <section class="result-section drivers-section" aria-labelledby="drivers-title"><div class="result-section-heading"><div><p class="section-kicker">SIGNAL MAP</p><h3 id="drivers-title">Key drivers</h3></div><span class="heading-note">RELATIVE EMPHASIS</span></div><ul class="driver-list" id="drivers-list"></ul><p class="section-footnote">Bars show relative emphasis in this run, not measured causal weight.</p></section>
+            <section class="result-section uncertainty-section" aria-labelledby="uncertainty-title"><div class="result-section-heading"><div><p class="section-kicker">BOUNDARIES</p><h3 id="uncertainty-title">Where the signal bends</h3></div><span class="heading-note">READ BEFORE ACTING</span></div><div class="uncertainty-grid" id="uncertainty-list"></div></section>
+          </div>
+
+          <div class="results-grid lower-results-grid">
+             <section class="result-section roster-section" aria-labelledby="roster-title"><div class="result-section-heading"><div><p class="section-kicker">PANEL SAMPLE</p><h3 id="roster-title">Representative roster</h3></div><span class="heading-note" id="roster-count">0 LENSES</span></div><div class="roster-list" id="roster-list"></div><p class="section-footnote">Synthetic perspectives make the aggregation legible; they are not real people.</p></section>
+             <section class="result-section debate-section" aria-labelledby="debate-title"><div class="result-section-heading"><div><p class="section-kicker">FULL TRACE LOG</p><h3 id="debate-title">Debate transcript</h3></div><span class="heading-note" id="debate-count">0 RECORDS</span></div><p class="section-lede">The transcript includes each role report and every returned synthesis round, with claims, counterclaims, rebuttals, and citations.</p><ol class="debate-list" id="debate-list"></ol></section>
+          </div>
+
+          <aside class="methodology-note" aria-labelledby="methodology-title"><div class="method-icon" aria-hidden="true">i</div><div class="methodology-copy"><p class="section-kicker">METHODOLOGY NOTE</p><h3 id="methodology-title">A transparent starting point, not a promise.</h3><p id="methodology-text">A configured provider will power a bounded live panel. Treat the output as a prompt for better questions and human judgment.</p><section class="timing-trace" aria-labelledby="timing-title"><div class="timing-trace-heading"><div><p class="section-kicker">TRACE TIMING</p><h4 id="timing-title">What the response reported</h4></div><span id="timing-summary">timing not returned</span></div><ol class="timing-trace-list" id="timing-trace-list"></ol></section></div></aside>
+        </section>
+      </main>
+
+      <footer class="site-footer"><p><span class="footer-mark" aria-hidden="true"></span> SWARM//SIGNAL <span class="footer-muted">/ LOCAL-FIRST RESEARCH</span></p><p class="footer-disclaimer">Evidence-aware panel or bundled demo · no real-world guarantee</p></footer>
+    </div>
+
+    <noscript><div class="no-script-message">JavaScript is required to run a research panel. Please enable it and reload this page.</div></noscript>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
